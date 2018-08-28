@@ -1,0 +1,3 @@
+ 
+[]
+[<span class="a-size-base review-text" data-hook="review-body">They are high quality, sturdy flash cards</span>, <span class="a-size-base review-text" data-hook="review-body">These routine cards are great.  Great idea : )  Thank you</span>, <span class="a-size-base review-text" data-hook="review-body">Beautiful</span>]
