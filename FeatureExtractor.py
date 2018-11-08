@@ -33,17 +33,12 @@ for asin in ASIN_list:
     print(f"the number of paragraphs is {paragraphs_per_review}")
 
 
-
-    # csv_input = pd.read_csv(asin+'metadata.csv')
-    # csv_input['no_words'] = csv_input[words_per_review_list]
-    # csv_input.to_csv('latest.csv', index = False)
-
-
     fr_1 = open(asin+'metadata.csv','r',encoding='utf-8')
     # metadata =  fr_1.readlines()
     metadata=pd.read_csv(asin+"metadata.csv", header= None, names=["Date","Stars","Helpful Votes"])
     df = pd.DataFrame(metadata)
     df['Words']= words_per_review_list
+    df['Z-Score'] = (df['Words'] - df['Words'].mean()) / df['Words'].std(ddof=0)
     df['Paragraphs'] = paragraphs_per_review
     df['No.break tags'] = break_tags_per_review
     print(df)
